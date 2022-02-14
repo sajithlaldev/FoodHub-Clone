@@ -6,6 +6,8 @@ import '../../utils/colors.dart';
 class IconTextWidget extends StatelessWidget {
   final String label;
   final IconData? iconData;
+  final IconData? sufficIconData;
+
   final String? count;
 
   const IconTextWidget({
@@ -13,6 +15,7 @@ class IconTextWidget extends StatelessWidget {
     required this.label,
     this.count,
     this.iconData,
+    this.sufficIconData,
   }) : super(key: key);
 
   @override
@@ -28,7 +31,7 @@ class IconTextWidget extends StatelessWidget {
                 )
               : Icon(
                   iconData,
-                  size: 20,
+                  size: 18,
                   color: ColorConstants.basicTextColor,
                 ),
           const SizedBox(
@@ -38,6 +41,13 @@ class IconTextWidget extends StatelessWidget {
             label,
             style: Theme.of(context).textTheme.bodyMedium,
           ),
+          sufficIconData != null
+              ? Icon(
+                  sufficIconData,
+                  size: 18,
+                  color: ColorConstants.basicTextColor,
+                )
+              : const SizedBox()
         ],
       ),
     );

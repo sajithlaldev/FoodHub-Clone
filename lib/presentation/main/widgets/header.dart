@@ -33,6 +33,7 @@ class HeaderWidget extends StatelessWidget {
           const IconTextWidget(
             label: Strings.ENGB,
             iconData: Icons.language,
+            sufficIconData: Icons.arrow_drop_down,
           ),
           Constants.horizontalPadding,
           IconTextWidget(

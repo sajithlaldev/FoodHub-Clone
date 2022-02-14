@@ -20,10 +20,10 @@ class IconWithBadge extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            top: 3,
+            top: 4,
             child: Icon(
               iconData,
-              size: 20,
+              size: 18,
               color: ColorConstants.basicTextColor,
             ),
           ),
@@ -50,8 +50,8 @@ class BadgetWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 14,
-      height: 14,
+      width: 12,
+      height: 16,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
         color: ColorConstants.primaryColor,
