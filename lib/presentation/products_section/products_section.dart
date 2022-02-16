@@ -17,7 +17,7 @@ class ProductsSection extends StatelessWidget {
         horizontal: 16,
       ),
       width: double.infinity,
-      height: _size.height * 0.8,
+      height: _size.height - 180 * 0.8,
       color: ColorConstants.backgroundColor,
       child: ListView(
         children: [
