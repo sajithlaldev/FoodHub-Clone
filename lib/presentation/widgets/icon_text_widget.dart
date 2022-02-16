@@ -7,6 +7,8 @@ class IconTextWidget extends StatelessWidget {
   final String label;
   final IconData? iconData;
   final IconData? sufficIconData;
+  final Color? color;
+  final double? size;
 
   final String? count;
 
@@ -15,6 +17,8 @@ class IconTextWidget extends StatelessWidget {
     required this.label,
     this.count,
     this.iconData,
+    this.color,
+    this.size,
     this.sufficIconData,
   }) : super(key: key);
 
@@ -32,20 +36,23 @@ class IconTextWidget extends StatelessWidget {
               : Icon(
                   iconData,
                   size: 18,
-                  color: ColorConstants.basicTextColor,
+                  color: color ?? ColorConstants.basicTextColor,
                 ),
           const SizedBox(
             width: 4,
           ),
           Text(
             label,
-            style: Theme.of(context).textTheme.bodyMedium,
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  color: color ?? ColorConstants.basicTextColor,
+                  fontSize: size ?? 14,
+                ),
           ),
           sufficIconData != null
               ? Icon(
                   sufficIconData,
                   size: 18,
-                  color: ColorConstants.basicTextColor,
+                  color: color ?? ColorConstants.basicTextColor,
                 )
               : const SizedBox()
         ],
