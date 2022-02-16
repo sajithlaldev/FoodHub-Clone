@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_hub_clone/presentation/main/widgets/product_item.dart';
+import 'package:food_hub_clone/presentation/products_section/widgets/product_item.dart';
 import 'package:food_hub_clone/utils/colors.dart';
 import 'package:food_hub_clone/utils/constants.dart';
 import 'package:food_hub_clone/utils/stings.dart';

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'basket_section.dart';
-import 'categories_section.dart';
-import 'products_section.dart';
+import '../../basket_section/basket_section.dart';
+import '../../categories_section/categories_section.dart';
+import '../../products_section/products_section.dart';
 
 class BodySection extends StatelessWidget {
   const BodySection({Key? key}) : super(key: key);

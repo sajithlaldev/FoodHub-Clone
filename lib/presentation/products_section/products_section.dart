@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_hub_clone/utils/colors.dart';
 
-import '../widgets/category_products_widget.dart';
-import '../widgets/search_widget.dart';
+import 'widgets/category_products_widget.dart';
+import 'widgets/search_widget.dart';
 
 class ProductsSection extends StatelessWidget {
   final _scrollController = ScrollController();
