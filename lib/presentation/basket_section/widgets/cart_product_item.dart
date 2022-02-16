@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:food_hub_clone/utils/assets.dart';
 import 'package:food_hub_clone/utils/colors.dart';
-import 'package:food_hub_clone/utils/stings.dart';
 
-class ProductItem extends StatelessWidget {
-  final int? count;
+class CartProductItem extends StatelessWidget {
+  final int count;
 
-  const ProductItem({Key? key, this.count}) : super(key: key);
+  const CartProductItem({Key? key, required this.count}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,34 +19,27 @@ class ProductItem extends StatelessWidget {
                 ),
           ),
         ),
+        Container(
+            width: 70,
+            height: 22,
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: ColorConstants.secondaryColor,
+              ),
+            ),
+            child: QuantityWidget(count: count)),
+        const SizedBox(
+          width: 16,
+        ),
         Text(
           '3.5',
           style: Theme.of(context).textTheme.bodySmall!.copyWith(
                 color: Colors.black,
+                fontSize: 14,
               ),
         ),
         const SizedBox(
-          width: 8,
-        ),
-        Container(
-          width: 70,
-          height: 22,
-          decoration: BoxDecoration(
-            border: Border.all(
-            color: ColorConstants.secondaryColor,
-            ),
-          ),
-          child: count != null
-              ? QuantityWidget(count: count)
-              : Center(
-                  child: Text(
-                    Strings.ADD.toUpperCase(),
-                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                          fontSize: 13,
-                          color: ColorConstants.secondaryColor,
-                        ),
-                  ),
-                ),
+          width: 16,
         ),
       ],
     );
@@ -84,7 +76,7 @@ class QuantityWidget extends StatelessWidget {
                   child: Icon(
                     Icons.horizontal_rule_outlined,
                     size: 18,
-                    color:  ColorConstants.secondaryColor,
+                    color: ColorConstants.secondaryColor,
                   ),
                 ),
               ),
@@ -105,7 +97,7 @@ class QuantityWidget extends StatelessWidget {
           ),
         ),
         const VerticalDivider(
-        color: ColorConstants.secondaryColor,
+          color: ColorConstants.secondaryColor,
           width: 0,
         ),
         const Expanded(
@@ -113,7 +105,7 @@ class QuantityWidget extends StatelessWidget {
           child: Icon(
             Icons.add,
             size: 20,
-           color: ColorConstants.secondaryColor,
+            color: ColorConstants.secondaryColor,
           ),
         ),
       ],

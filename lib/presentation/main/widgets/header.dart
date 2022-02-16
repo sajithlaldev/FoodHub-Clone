@@ -14,7 +14,7 @@ class HeaderWidget extends StatelessWidget {
 
     //for padding on left and right
     final _sidePadding = SizedBox(
-      width: _size.width * 0.2,
+      width: _size.width * 0.21,
     );
 
     return Container(

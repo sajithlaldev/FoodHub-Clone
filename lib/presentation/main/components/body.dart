@@ -21,7 +21,7 @@ class BodySection extends StatelessWidget {
           child: ProductsSection(),
         ),
         const Expanded(
-          flex: 5,
+          flex: 4,
           child: BasketSection(),
         )
       ],

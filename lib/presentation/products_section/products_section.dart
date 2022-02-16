@@ -25,23 +25,21 @@ class ProductsSection extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          Flexible(
-            child: ListView.separated(
-              physics: const NeverScrollableScrollPhysics(),
-              controller: _scrollController,
-              itemBuilder: (context, index) {
-                return const CategoriesProductsSection(
-                  title: 'Best Selling',
-                );
-              },
-              separatorBuilder: (context, index) {
-                return const SizedBox(
-                  height: 20,
-                );
-              },
-              shrinkWrap: true,
-              itemCount: 5,
-            ),
+          ListView.separated(
+            physics: const NeverScrollableScrollPhysics(),
+            controller: _scrollController,
+            itemBuilder: (context, index) {
+              return const CategoriesProductsSection(
+                title: 'Best Selling',
+              );
+            },
+            separatorBuilder: (context, index) {
+              return const SizedBox(
+                height: 20,
+              );
+            },
+            shrinkWrap: true,
+            itemCount: 5,
           ),
         ],
       ),
