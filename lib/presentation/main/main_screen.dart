@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:food_hub_clone/presentation/main/components/appbar.dart';
 import 'package:food_hub_clone/presentation/main/components/basket_section.dart';
+import 'package:food_hub_clone/presentation/main/components/body.dart';
 import 'package:food_hub_clone/presentation/main/components/sub_header.dart';
 import 'package:food_hub_clone/utils/colors.dart';
 
@@ -25,25 +26,9 @@ class MainScreen extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: _size.width * 0.2),
         child: Column(
-          children: [
-            const SubHeader(),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Expanded(
-                  flex: 3,
-                  child: CategoriesSection(),
-                ),
-                Expanded(
-                  flex: 5,
-                  child: ProductsSection(),
-                ),
-                Expanded(
-                  flex: 4,
-                  child: BasketSection(),
-                )
-              ],
-            )
+          children: const [
+            SubHeader(),
+            BodySection(),
           ],
         ),
       ),
