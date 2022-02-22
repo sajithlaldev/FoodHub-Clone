@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_hub_clone/utils/colors.dart';
+import 'package:food_hub_clone/utils/utils.dart';
 
 import 'widgets/category_products_widget.dart';
 import 'widgets/search_widget.dart';
@@ -13,9 +14,6 @@ class ProductsSection extends StatelessWidget {
     final _size = MediaQuery.of(context).size;
 
     return Container(
-      margin: const EdgeInsets.symmetric(
-        horizontal: 16,
-      ),
       width: double.infinity,
       height: _size.height - 180 * 0.8,
       color: ColorConstants.backgroundColor,
