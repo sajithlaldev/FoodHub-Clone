@@ -27,6 +27,9 @@ class ProductsSection extends StatelessWidget {
             physics: const NeverScrollableScrollPhysics(),
             controller: _scrollController,
             itemBuilder: (context, index) {
+              if (index == 5) {
+                print("basket building");
+              }
               return const CategoriesProductsSection(
                 title: 'Best Selling',
               );

@@ -195,7 +195,6 @@ class BasketSection extends StatelessWidget {
                 ),
               ),
             ),
-           
           ],
         ),
       ),
