@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import '../../../utils/colors.dart';
 import '../components/sub_header.dart';
@@ -74,8 +73,8 @@ class SubHeaderItemWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(
         top: 2,
-        left: 10,
-        right: 10,
+        left: 8,
+        right: 8,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -90,7 +89,7 @@ class SubHeaderItemWidget extends StatelessWidget {
                         Icon(
                           iconData,
                           color: ColorConstants.primaryColor,
-                          size: 20,
+                          size: 16,
                         ),
                         const SizedBox(
                           width: 2,
@@ -98,11 +97,13 @@ class SubHeaderItemWidget extends StatelessWidget {
                       ],
                     )
                   : const SizedBox(
-                      height: 20,
+                      height: 16,
                     ),
               Text(
                 value,
-                style: Theme.of(context).textTheme.bodySmall,
+                style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      fontSize: 12,
+                    ),
               ),
             ],
           ),
@@ -112,6 +113,7 @@ class SubHeaderItemWidget extends StatelessWidget {
           Text(
             caption,
             style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                  fontSize: 12,
                   fontWeight: FontWeight.w300,
                 ),
           )

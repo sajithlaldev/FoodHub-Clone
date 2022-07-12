@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/header.dart';
+import 'header.dart';
 
 class AppBarWidget extends StatelessWidget {
   const AppBarWidget({Key? key}) : super(key: key);

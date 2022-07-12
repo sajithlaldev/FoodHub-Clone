@@ -20,7 +20,7 @@ class SubHeader extends StatelessWidget {
           children: const [
             RestuarantNameWidget(),
             SizedBox(
-              width: 16,
+              width: 14,
             ),
             SubHeaderItems(),
             Spacer(),
@@ -75,7 +75,7 @@ class SubHeaderRightSection extends StatelessWidget {
           child: const IconTextWidget(
             label: 'DELIVERY',
             iconData: Icons.delivery_dining,
-            size: 12,
+            size: 10,
             sufficIconData: Icons.keyboard_arrow_down,
             color: Colors.white,
           ),
@@ -98,15 +98,15 @@ class RestuarantNameWidget extends StatelessWidget {
         children: [
           Text(
             'Indian Express',
-            style: Theme.of(context).textTheme.bodyLarge,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
           const SizedBox(
-            width: 1,
+            width: 2,
           ),
           const Icon(
             Icons.info_outline,
             color: Colors.lightBlue,
-            size: 20,
+            size: 16,
           ),
         ],
       ),
@@ -122,7 +122,7 @@ class FavoriteWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.all(12.0),
+      padding: EdgeInsets.all(10.0),
       child: Icon(
         Icons.favorite_border,
         color: ColorConstants.primaryColor,
